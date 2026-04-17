@@ -56,9 +56,11 @@ function App() {
     setScores({ X: 0, Draws: 0, O: 0 });
   };
 
+  // Evaluate win and draw conditions
   const winInfo = calculateWinner(board);
   const isDraw = !winInfo && !board.includes(null);
 
+  // Set visual status message
   let status;
   if (winInfo) {
     status = `Winner: ${winInfo.winner}`;
@@ -68,12 +70,23 @@ function App() {
     status = `Turn: ${isXNext ? "X" : "O"}`;
   }
 
+  // Keyboard accessibility handler for cells
+  const handleKeyDown = (e, index) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handleClick(index);
+    }
+  };
+
   const renderCell = (index) => {
     const isWinCell = winInfo && winInfo.line.includes(index);
     return (
       <div
         className={`cell ${board[index] || ""} ${isWinCell ? "win" : ""}`}
         onClick={() => handleClick(index)}
+        onKeyDown={(e) => handleKeyDown(e, index)}
+        role="button"
+        tabIndex="0"
+        aria-label={`Cell ${index}`}
       >
         {board[index] && board[index].toLowerCase()}
       </div>

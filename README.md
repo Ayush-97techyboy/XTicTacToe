@@ -1,18 +1,19 @@
-# React + Vite
+# XTicTacToe - Frontend React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, visually polished implementation of the classic **Tic-Tac-Toe** table game built entirely with React and vanilla styling. Built as part of a frontend capstone sprint adhering to structural Crio.do design principles.
 
-Currently, two official plugins are available:
+## Features Focus 
+- **Reactive State Flow:** Accurately calculates real-time combinations dictating win/draw boundaries flawlessly, tracking aggregate scoring over endless resets.
+- **Responsive Architecture:** Flex-scaling fluid viewport transitions alongside breakpoints (Media Queries) ensure scaling is comfortably rendered stretching from 4K large-screens to compact mobile interfaces natively.
+- **Aesthetic Precision:** Fully themed implementing bespoke typography ("PF Bague Sans Pro" / "Core Sans B"), custom component layout logic, dynamic `.win` state highlighting feedback mechanics, and pristine spacing algorithms matching spec design limits seamlessly.
+- **Accessible By Design:** Cells actively track ARIA attributes and keyboard traversal mapping logic (Tab / Enter integration).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- **Library**: `React` (Functional Hooks / `useState` bindings)
+- **Environment**: `Vite` pipeline structure 
+- **Styling**: `Vanilla CSS3` 
 
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running Locally 
+To initialize dev cycles matching the application on a local footprint:
+1. `npm install` packages 
+2. Trigger the server block via `npm run dev` and navigate to the localhost port defined natively (typically `:5173`). 
